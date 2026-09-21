@@ -1,0 +1,58 @@
+#logo{
+    width: 100px;
+}
+.title{
+    display: inline-block;
+}
+/*grid system*/
+.page{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 80px 1fr;
+    grid-template-areas: 
+        "nav nav"
+        "side main";
+    min-height: 100vh;
+}
+
+nav{
+    grid-area: nav;
+    background-color: black;
+}
+
+aside{
+    grid-area: side;
+    background-color: beige;
+}
+
+main{
+    grid-area: main;
+}
+/* End of grid*/
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: green;
+}
+
+.album{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr;
+    gap:20px;
+
+}
+
+.album img{
+    width: 100%;
+}
+
+nav.nav-bar{
+    display: flex;
+    justify-content: center; /*center on the main axis*/
+    align-items: center;
+    gap:10px;
+}

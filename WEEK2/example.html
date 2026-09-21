@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 2 - CSS</title>
+    <!-- 
+      #####
+        selectors: element, id, class, universal
+        combinators: 
+            child: >
+            descendant: space
+            next sibling: + 
+            selector list: ,
+        pseudo-classes: :hover, :last-child, :nth-child(even)
+        pseudo-elements: ::first-letter, ::first-line, ::before, ::after
+        Check out:
+            https://www.w3schools.com/cssref/css_selectors.php
+            https://www.w3schools.com/cssref/css_ref_combinators.php
+            https://www.w3schools.com/cssref/css_ref_pseudo_classes.php
+
+        properties: color, background-color, border, padding, margin, font-*, text-align, text-decoration, display, width, max-width, margin-auto 
+
+      #####
+        positioning: static, relative, absolute, fixed, sticky
+        z-index: -1, 1, 2, 3
+        Flexbox: display: flex, justify-content, align-items, flex-direction, flex-wrap, gap
+        Grid: display: grid, grid-template-columns, grid-template-rows, grid-gap, grid-column, grid-row
+        Check out:
+            https://www.w3schools.com/css/css_positioning.asp
+            https://www.w3schools.com/css/css3_flexbox.asp
+            https://www.w3schools.com/css/css_grid.asp
+    -->
+
+  </head>
+
+    <style>
+    p {
+      background-color: bisque;
+      color: blue;
+      /* rem is 16* remamount */
+      font-size: 1.5rem;
+    }
+    body{
+      background-color: violet;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .pp{
+      font-weight: 1000;
+      text-decoration: underline;
+    }
+    .paragraph1{
+      text-align: left;
+      margin: 10px;
+      border-width: 1px;
+      border-style: double;
+      border-color: rebeccapurple;
+
+    }
+    .paragraph2{
+      text-align: right;
+      border-radius: 20%;
+      border: 2px dashed yellow;
+      padding: 10%;
+    }
+  </style>
+  <body>
+    <h1 style="color: aquamarine; background-color: yellowgreen;">THIS IS A CSS</h1>
+    <p>Lorem ipsum, dolor sit <div>amet</div> consectetur <span class="pp">adipisicing</span> elit.  eos ipsam placeat sapiente id!</p>
+    <p class="paragraph1">Corrupti</p>
+    <p class="paragraph2">exercitationem</p>
+  </body>
+<!--
+inline tag: button,input, img
+appears inline next to each other
+
+block tag: h1-h6,div,ol,ul
+goes to the next line to input
+-->
+
+</html>

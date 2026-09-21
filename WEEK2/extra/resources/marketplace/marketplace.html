@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>My Marketplace</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 20px;
+            }
+
+            form {
+                width: min(100%, 700px);
+            }
+
+            .banner {
+                display: block;
+                width: 100%;
+                height: 100px;
+                object-fit: cover;
+            }
+
+            p {
+                color: blue;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                text-align: left;
+            }
+
+            h2 {
+                color: red;
+            }
+
+            .vegetable-heading {
+                color: green;
+            }
+
+            .drinks-heading {
+                color: brown;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            th,
+            td {
+                padding: 2px 4px;
+            }
+
+            th {
+                background-color: palevioletred;
+            }
+
+            tr:nth-child(even) {
+                background-color: paleturquoise;
+            }
+
+            td {
+                text-transform: capitalize;
+            }
+
+            .outer-container {
+                display: flex;
+                align-items: center;
+            }
+
+            .item-container {
+                margin: 10px;
+                padding: 20px;
+            }
+
+            .market-image {
+                width: 200px;
+                height: 200px;
+                object-fit: contain;
+            }
+
+            .coffee-image {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+            }
+
+            input[type="checkbox"] {
+                appearance: none;
+                width: 16px;
+                height: 16px;
+                border: 1px solid #aaa;
+                border-radius: 2px;
+                background-color: white;
+                cursor: pointer;
+            }
+
+            input[type="checkbox"]:checked {
+                position: relative;
+                width: 50px;
+                height: 50px;
+                background-color: #2f80ed;
+            }
+
+            input[type="checkbox"]:checked::after {
+                position: absolute;
+                top: 7px;
+                left: 16px;
+                width: 12px;
+                height: 25px;
+                border: solid white;
+                border-width: 0 6px 6px 0;
+                content: "";
+                transform: rotate(45deg);
+            }
+
+            input[type="submit"] {
+                padding: 8px 12px;
+                border: 1px solid black;
+                border-radius: 2px;
+                background-color: white;
+                cursor: pointer;
+            }
+
+            @media (max-width: 600px) {
+                .outer-container {
+                    flex-wrap: wrap;
+                }
+
+                .item-container {
+                    padding: 10px;
+                }
+            }
+            
+       
+        </style>
+    </head>
+
+    <body>
+
+    <form action="marketplace.php" method="get">
+        <img class="banner" src="images/marketplace.jpg" alt="Marketplace banner">
+        <h1> Welcome to my Marketplace </h1>
+
+        <h2> Fruit Section </h2>
+        <p> The list of fruit available are as below :</p>
+	    <div class="outer-container">
+            <div class="item-container">
+                <img class="market-image" src="images/fruit.jpeg" alt="Assorted fruit">
+            </div>
+            
+            <div class="item-container">
+                <table>
+                    <tr> 
+                        <th> Name </th>
+                        <th> Qty </th>
+                        <th> Select </th>
+                    </tr>
+                    <tr> 
+                        <td> Banana</td>
+                        <td> 6 </td>
+                        <td> <input type="checkbox" name="fruit[]" value="banana" aria-label="Select banana"> </td>
+                    </tr>
+                    <tr> 
+                        <td> Peach</td>
+                        <td> 12 </td>
+                        <td> <input type="checkbox" name="fruit[]" value="peach" aria-label="Select peach"> </td>
+                    </tr>
+                    <tr> 
+                        <td> Orange </td>
+                        <td> 5</td>
+                        <td> <input type="checkbox" name="fruit[]" value="orange" aria-label="Select orange"> </td>
+                    </tr>
+                    <tr> 
+                        <td> Apple </td>
+                        <td> 2</td>
+                        <td> <input type="checkbox" name="fruit[]" value="apple" aria-label="Select apple"> </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+        <h2 class="vegetable-heading"> Vegetable Section</h2>
+
+        <p> The list of vegetable available are as below :</p>
+        
+        <div class="outer-container">
+            <div class="item-container">
+                <table>
+                    <tr> 
+                        <th> Name </th>
+                        <th> Qty </th>
+                        <th> Select </th>
+                    </tr>
+                    <tr> 
+                        <td> Cabbage </td>
+                        <td> 8 </td>
+                        <td> <input type="checkbox" name="veg[]" value="cabbage" aria-label="Select cabbage"> </td>
+                    </tr>
+                    <tr> 
+                        <td> Lettuce </td>
+                        <td> 7 </td>
+                        <td> <input type="checkbox" name="veg[]" value="lettuce" aria-label="Select lettuce"> </td>
+                    </tr>
+                    <tr> 
+                        <td> Spinach</td>
+                        <td> 3 </td>
+                        <td> <input type="checkbox" name="veg[]" value="spinach" aria-label="Select spinach"> </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="item-container">
+                <img class="market-image" src="images/veg.jpg" alt="Assorted vegetables">
+            </div>
+            
+        </div>
+    
+        <h2 class="drinks-heading"> Drinks Section</h2>
+        <p> The list of drinks available are as below :</p>
+        <div class="outer-container">
+
+            <div class="item-container">
+                <img class="coffee-image" src="images/coffee.jpg" alt="Coffee">
+            </div>
+            <div class="item-container">
+                <table>
+                    <tr> 
+                        <th> Name </th>
+                        <th> Qty </th>
+                        <th> Select </th>
+                    </tr>
+                    <tr> 
+                        <td> Coffee </td>
+                        <td> 3 </td>
+                        <td> <input type="checkbox" name="drink[]" value="coffee" aria-label="Select coffee"> </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="item-container">
+                <img class="coffee-image" src="images/coffee.jpg" alt="Coffee">
+            </div>
+        </div>
+
+
+        <input type="submit" name="submit" value="Submit">
+
+    </form>
+
+    </body>
+
+</html>

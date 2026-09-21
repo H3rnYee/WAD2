@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <title>HTML Tags</title>
+
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <style>
+            .fav {
+                color: red;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <div id="div3">
+            <p>Try unusual or invalid values, then submit the form to see how the browser validates each input type.</p>
+            <form id="input-demo">
+                <label>Color input: <input type="color" name="color" value="#00ff00"></label><br>
+                <label>Date input: <input type="date" name="date"></label><br>
+                <label>Email input: <input type="email" name="email" placeholder="name@example.com"></label><br>
+                <label>File input: <input type="file" name="file"></label><br>
+                <label>Number input: <input type="number" name="number" min="10" max="30" value="20"></label><br>
+                <label>Range input: <input id="range" type="range" name="range" min="10" max="50" value="10"></label>
+                <output id="range-value" for="range">10</output><br>
+                <label>Search input: <input type="search" name="search"></label><br>
+                <label>Tel input: <input type="tel" name="tel" placeholder="+65 6123 4567"></label><br>
+                <label>Time input: <input type="time" name="time"></label><br>
+                <label>URL input: <input type="url" name="url" placeholder="https://example.com"></label><br>
+                <button type="submit">Submit</button>
+            </form>
+            <p id="result" role="status"></p>
+        </div>
+
+        <script>
+            const form = document.getElementById('input-demo');
+            const range = document.getElementById('range');
+            const rangeValue = document.getElementById('range-value');
+            const result = document.getElementById('result');
+
+            range.addEventListener('input', () => {
+                rangeValue.value = range.value;
+            });
+
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                result.textContent = 'All entered values passed the browser\'s HTML validation.';
+            });
+        </script>
+       
+    </body>
+    
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Learn About Shapes, Colors and Numbers</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            h1 {
+                color: darkmagenta;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            table,
+            td {
+                border: 1px solid black;
+                text-align: center;
+            }
+
+            p {
+                font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            tr:hover {
+                font-size: 30px;
+            }
+
+            .numbers-section {
+                margin-left: 100px;
+            }
+
+            .colours-section {
+                margin-left: 200px;
+            }
+
+            .shape-name {
+                background-color: lightblue;
+            }
+
+            .number-name {
+                background-color: lightgoldenrodyellow;
+                font-family: "Courier New", Courier, monospace;
+            }
+
+            .colour-name {
+                background-color: black;
+            }
+
+            @media (max-width: 650px) {
+                .numbers-section,
+                .colours-section {
+                    margin-left: 0;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1> Learn About Shapes, Colors and Numbers </h1>
+        
+        <div>
+            <p> Shapes </p>
+            <table>
+                <tr> 
+                    <td>
+                        <img src="images/circle.jpg" height="100" width="100" alt="Circle"> 
+                    </td>
+                    <td>
+                        <img src="images/square.jpg" height="100" width="100" alt="Square"> 
+                    </td>
+                    <td>
+                        <img src="images/triangle.jpg" height="100" width="100" alt="Triangle"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="shape-name" style="color:red;"> Circle </td>
+                    <td class="shape-name" style="color:green;"> Square </td>
+                    <td class="shape-name" style="color:blue;"> Triangle </td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div class="numbers-section">
+            <p> Numbers </p>
+            <table>
+                <tr> 
+                    <td>
+                        <img src="images/one.jpg" height="100" width="100" alt="One"> 
+                    </td>
+                    <td>
+                        <img src="images/two.jpg" height="100" width="100" alt="Two"> 
+                    </td>
+                    <td>
+                        <img src="images/three.jpg" height="100" width="100" alt="Three"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="number-name"> One </td>
+                    <td class="number-name"> Two </td>
+                    <td class="number-name"> Three </td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div class="colours-section">
+            <p> Colours</p>
+            <table >
+                <tr> 
+                    <td>
+                        <img src="images/blue.jpg" height="100" width="100" alt="Blue"> 
+                    </td>
+                    <td>
+                        <img src="images/green.jpg" height="100" width="100" alt="Green"> 
+                    </td>
+                    <td>
+                        <img src="images/yellow.jpg" height="100" width="100" alt="Yellow"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="colour-name" style="color:lightblue;"> Blue </td>
+                    <td class="colour-name" style="color:green;"> Green </td>
+                    <td class="colour-name" style="color:yellow;"> Yellow </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
